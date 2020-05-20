@@ -7,12 +7,13 @@
  */
 
 .site-header {
-  background-color: rgba(0, 0, 0, .85);
+  background-color: rgba(46, 68, 136, 0.932);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
+  margin-bottom: 20px;
 }
 .site-header a {
-  color: #999;
+  color: rgb(190, 187, 187);
   transition: ease-in-out color .15s;
 }
 .site-header a:hover {
@@ -30,7 +31,7 @@
   bottom: -30%;
   width: 300px;
   height: 540px;
-  background-color: #333;
+  background-color: rgb(46, 69, 136);
   border-radius: 21px;
   -webkit-transform: rotate(30deg);
   transform: rotate(30deg);
@@ -43,7 +44,7 @@
   bottom: 10%;
   left: 10px;
   content: "";
-  background-color: rgba(255, 255, 255, .1);
+  background-color: rgb(46, 69, 136);
   border-radius: 5px;
 }
 

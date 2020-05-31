@@ -6,7 +6,14 @@
         <link rel="stylesheet" href="./views/css/index.css">
     </head>
     <body>
-        <?php include './views/en-tete.php'; ?>
+        <nav class="site-header sticky-top py-1">
+            <div class="container d-flex flex-column flex-md-row justify-content-between">
+                <a class="py-2 d-none d-md-inline-block" href="index.php">Accueil</a>
+                <a class="py-2 d-none d-md-inline-block" href="./controleur/matiere.php">Matière</a>
+                <a class="py-2 d-none d-md-inline-block" href="#">Etudiants</a>
+                <a class="py-2 d-none d-md-inline-block" href="./controleur/candidater.php">Candidater</a>
+            </div>
+        </nav>
 		<div class="divGenerale">
             <div class="presentation">
                 <div>

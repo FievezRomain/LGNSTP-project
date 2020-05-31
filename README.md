@@ -43,7 +43,7 @@ L'équipe qui développera ce projet est composée de :
 
 # Les technologies
 
-Pour réaliser ce projet, les langages JavaScript, SQL, HTML et CSS sont imposés. Nous allons donc utiliser le système de gestion de base de données MYSQL ainsi que la librairie Bootstrap pour le CSS du projet.  
+Pour réaliser ce projet, les langages JavaScript, SQL, HTML et CSS sont imposés. Nous allons donc utiliser le système de gestion de base de données MYSQL ainsi que la librairie Materialize pour le CSS du projet.  
 
 # Deadline
 

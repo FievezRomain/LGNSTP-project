@@ -1,0 +1,24 @@
+.divGenerale{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.presentation{
+    display: flex;
+    justify-content: center;
+    height: inherit;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.masterImage{
+    float: left;
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
+.embaucheImage{
+    float: right;
+}
+.caracteristique{
+    display: inline-flex;
+    width: 100%;
+}

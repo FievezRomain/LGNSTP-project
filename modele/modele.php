@@ -31,7 +31,7 @@
     function addCandidat($etudiant){
         $db = init();
         $query = $db->prepare(
-            "INSERT INTO etudiant VALUES (0, :nom, :prenom, :adresse, :dateN, :parcours, :noteM, :noteI, :noteA, :moyenne, :lettreM, :statut)"
+            "INSERT INTO etudiant (nom, prenom, adresse, dateN, parcours, noteMath, noteInf, noteAng, moyenne, lettreMotivation, idStatut) VALUES (:nom, :prenom, :adresse, :dateN, :parcours, :noteM, :noteI, :noteA, :moyenne, :lettreM, :statut)"
         );
         $nom = $etudiant->getNom();
         $query->bindParam(':nom', $nom);
@@ -53,7 +53,7 @@
         $query->bindParam(':moyenne', $moyenne);
         $lettreM = $etudiant->getLettreM();
         $query->bindParam(':lettreM', $lettreM);
-        $statut = "candidat";
+        $statut = 2;
         $query->bindParam(':statut', $statut);
         $query->execute();
     }
@@ -98,9 +98,26 @@
     function getAllEtudiants(){
         $db = init();
         $query = $db->prepare(
-            "SELECT * from etudiant"
+            "SELECT etudiant.id, nom, prenom, adresse, dateN, parcours, noteMath, noteInf, noteAng, moyenne, lettreMotivation, urlImage, entreprise.designation, stage.specialite from etudiant
+            JOIN stage on stage.id = etudiant.idStage
+            JOIN entreprise on entreprise.id = etudiant.idEntreprise
+            WHERE idStatut = 1"
         );
         $query->execute();
         return $query->fetchall();
+    }
+
+    function getEtudiantById($id){
+        $db = init();
+        $query = $db->prepare(
+            "SELECT etudiant.id, nom, prenom, adresse, dateN, parcours, noteMath, noteInf, noteAng, moyenne, lettreMotivation, urlImage, entreprise.designation, stage.specialite from etudiant
+            JOIN stage on stage.id = etudiant.idStage
+            JOIN entreprise on entreprise.id = etudiant.idEntreprise
+            WHERE etudiant.id = :id"
+        );
+        $query->bindParam(':id', $id);
+        $query->execute();
+        $result = $query->fetch();
+        return $result;
     }
 ?>

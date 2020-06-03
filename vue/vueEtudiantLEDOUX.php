@@ -17,8 +17,50 @@
                 <!-- <h4 class="header2">Candidater au Master MIAGE</h4> -->
                 <div class="row">
                   <form class="col s12" action="" method="POST">
+				  <div class="row center">
+                        <div class="col s6">
+                            <h4><?php echo $etudiant["nom"];?></h4>
+                        </div>
+                        <div class="col s6">
+                            <h4><?php echo $etudiant["prenom"];?></h4>
+                        </div>
+                    </div>
+					<div class="row">
+                        <div class="col s5 offset-s3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="<?php echo $etudiant["urlImage"];?>">
+                                </div>
+                            </div>
+                        </div>
+						<div class="col s4">
+							<a href="../vue/ressources/CVLOUIS.pdf" download="CV.pdf"><i class="material-icons medium">picture_as_pdf</i></a>
+							<p><b>CV.pdf</b></p>
+						</div>
+                    </div>
+					<div class="row">
+                      <div class="col s4 offset-s4">
+                        <p><b>Parcours: </b><?php echo $etudiant["parcours"];?></p>
+                      </div>
+                    </div>
+					<div class="row">
+                      <div class="col s4">
+                        <p><b>Note de mathématique: </b><?php echo utf8_encode($etudiant["noteMath"]);?></p>
+                      </div>
+                      <div class="col s4">
+                        <p><b>Note d'informatique: </b><?php echo utf8_encode($etudiant["noteInf"]);?></p>
+                      </div>
+                      <div class="col s3">
+                        <p><b>Note d'anglais: </b><?php echo utf8_encode($etudiant["noteAng"]);?></p>
+                      </div>
+                    </div>
+					<div class="row">
+						<div class="col s4 offset-s4">
+							<p><b><i>Moyenne générale: </i></b><?php echo utf8_encode($etudiant["moyenne"]);?></p>
+						</div>
+					</div>
                     <div class="row">
-                        <div class="col s3 right">
+                        <div class="col s2 offset-s5">
                             <div class="card">
                                 <div class="card-image">
                                     <a href="https://www.palatine.fr/"><img src="../vue/ressources/banque_palatine.jpg"></a>
@@ -26,54 +68,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row center">
-                        <div class="col s4 offset-s4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="<?php echo $etudiant["urlImage"];?>">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row center">
-                        <div class="col s2 offset-s4">
-                            <h4><?php echo $etudiant["nom"];?></h4>
-                        </div>
-                        <div class="col s2">
-                            <h4><?php echo $etudiant["prenom"];?></h4>
-                        </div>
-                    </div>
-                    <div class="row">
-                      <div class="col s4">
-                        <p><b>Parcours: </b><?php echo $etudiant["parcours"];?></p>
-                      </div>
-                      <div class="col s4">
-                        <p><b>Société d'accueil: </b><?php echo $etudiant["designation"];?></p>
-                      </div>
-                      <div class="col s4">
-                        <p><b>Spécialité en entreprise: </b><?php echo utf8_encode($etudiant["specialite"]);?></p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col s3">
-                        <p><b>Note de mathématique: </b><?php echo utf8_encode($etudiant["noteMath"]);?></p>
-                      </div>
-                      <div class="col s3">
-                        <p><b>Note d'informatique: </b><?php echo utf8_encode($etudiant["noteInf"]);?></p>
-                      </div>
-                      <div class="col s3">
-                        <p><b>Note d'anglais: </b><?php echo utf8_encode($etudiant["noteAng"]);?></p>
-                      </div>
-                      <div class="col s3">
-                        <p><b>Moyenne générale: </b><?php echo utf8_encode($etudiant["moyenne"]);?></p>
-                      </div>
-                    </div>
-                    <div class="row center">
-                      <div class="col s12">
-                        <a href="../vue/ressources/CVLOUIS.pdf" download="CV.pdf"><i class="material-icons medium">picture_as_pdf</i></a>
-                        <p><b>CV.pdf</b></p>
-                      </div>
-                    </div>
+					<div class="row">
+						<div class="col s3 offset-s3">
+							<p><b>Société d'accueil: </b><?php echo $etudiant["designation"];?></p>
+						</div>
+						<div class="col s4">
+							<p><b>Spécialité en entreprise: </b><?php echo utf8_encode($etudiant["specialite"]);?></p>
+						</div>
+					</div>
                   </form>
                 </div>
               </div>

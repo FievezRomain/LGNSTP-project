@@ -40,21 +40,8 @@ function checkForm(){
     }
     var lettreMotivation = document.getElementById("lettreMotivation").value;
     if(lettreMotivation == "" || lettreMotivation == undefined){
-        if(document.getElementById('lettreMFile').files[0] != undefined){
-            var file = document.getElementById('lettreMFile').files[0];
-            var reader = new FileReader();
-        
-            reader.onload = function(e) {
-                var content = reader.result;
-                //Here the content has been read successfuly
-                document.getElementById("lettreMotivation").value = content;
-            }
-        
-            reader.readAsText(file);
-        } else{
-            displayError("Vous devez écrire ou joindre votre lettre de motivation !");
-            valide = false;
-        }
+        displayError("Vous devez écrire ou joindre votre lettre de motivation !");
+        valide = false;
     }
     return valide;
 }
@@ -73,4 +60,15 @@ function displayError(str){
 
 $(document).ready(function(){
     $('select').formSelect();
+    document.getElementById('lettreMFile') 
+            .addEventListener('change', function() { 
+              
+            var fr=new FileReader(); 
+            fr.onload=function(){ 
+                document.getElementById('lettreMotivation') 
+                        .textContent=fr.result; 
+            } 
+              
+            fr.readAsText(this.files[0]); 
+        }) 
 });

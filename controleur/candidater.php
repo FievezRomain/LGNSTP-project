@@ -93,6 +93,7 @@
         $_SESSION["noteA"] = $_POST["noteA"];
         $_SESSION["moyenne"] = $_POST["moyenne"];
         $_SESSION["lettreM"] = $_POST["lettreM"];
+        var_dump($_POST["lettreM"]);
         $_SESSION["action"] = "resume";
         refresh();
     }

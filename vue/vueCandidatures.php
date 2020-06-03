@@ -17,6 +17,11 @@
                 <div class="row">
                   <form class="col s12" action="" method="post">
                     <div class="row">
+                      <div class="input-field col s12 center">
+                        <h4>Ancienne candidature</h4>
+                      </div>
+                    </div>
+                    <div class="row">
                       <div class="input-field col s12 m6">
                         <p><?php echo $ancienEtudiant->getNom()?></p>
                         <label for="nom" class="active">Nom</label>
@@ -77,6 +82,11 @@
                 <div class="card-panel">
                   <div class="row">
                     <form class="col s12" action="" method="post">
+                      <div class="row">
+                        <div class="input-field col s12 center">
+                          <h4>Nouvelle candidature</h4>
+                        </div>
+                      </div>
                       <div class="row">
                         <div class="input-field col s12 m6">
                           <p><?php echo $etudiant->getNom()?></p>

@@ -41,10 +41,10 @@
                     </div>
                     <div class="row">
                       <div class="col s4">
-                        <p><b>Parcours: </b><?php echo $etudiant["parcours"];?></p>
+                        <p><b>Parcours: </b><?php echo utf8_encode($etudiant["parcours"]);?></p>
                       </div>
                       <div class="col s4">
-                        <p><b>Société d'accueil: </b><?php echo $etudiant["designation"];?></p>
+                        <p><b>Société d'accueil: </b><?php echo utf8_encode($etudiant["designation"]);?></p>
                       </div>
                       <div class="col s4">
                         <p><b>Spécialité en entreprise: </b><?php echo utf8_encode($etudiant["specialite"]);?></p>

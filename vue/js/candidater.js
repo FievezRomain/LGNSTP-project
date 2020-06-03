@@ -38,6 +38,24 @@ function checkForm(){
         displayError("Votre moyenne générale doit être supérieure à 14 !");
         valide = false;
     }
+    var lettreMotivation = document.getElementById("lettreMotivation").value;
+    if(lettreMotivation == "" || lettreMotivation == undefined){
+        if(document.getElementById('lettreMFile').files[0] != undefined){
+            var file = document.getElementById('lettreMFile').files[0];
+            var reader = new FileReader();
+        
+            reader.onload = function(e) {
+                var content = reader.result;
+                //Here the content has been read successfuly
+                document.getElementById("lettreMotivation").value = content;
+            }
+        
+            reader.readAsText(file);
+        } else{
+            displayError("Vous devez écrire ou joindre votre lettre de motivation !");
+            valide = false;
+        }
+    }
     return valide;
 }
 function isANumber(str){

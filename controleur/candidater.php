@@ -49,6 +49,7 @@
                 }
                 break;
             case "modifCandidature":
+                $parcours = getAllParcours();
                 include "../vue/vueModifCandidature.php";
                 if(isset($_POST["action"])){
                     confirmCandidature();
@@ -56,6 +57,7 @@
                 break;
         }
     } else{
+        $parcours = getAllParcours();
         include "../vue/vueCandidater.php";
         if(isset($_POST["action"])){
             confirmCandidature();

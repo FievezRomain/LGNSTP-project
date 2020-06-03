@@ -149,7 +149,7 @@
                                 <li class="bulletEmbauche">Expert fonctionnel entrepôt de données </li>
                             </ul>
                         </div>
-                        <div class="col s12 offset-s3">
+                        <div class="col s12">
                             <p><u>IF</u></p>
                             <ul>
                                 <li class="bulletEmbauche">Responsable de la production informatique et du support applicatif Banque d'Investissement </li>

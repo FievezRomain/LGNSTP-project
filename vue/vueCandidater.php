@@ -45,9 +45,11 @@
                     </div>
                     <div class="row">
                       <div class="input-field col s12">
-                        <select name="parcours" required>
+                        <select name="parcours" id="parcours" required>
                             <option value="" disabled selected>Choisissez votre parcours</option>
-                            <option value="Licence">Licence</option>
+                            <?php foreach($parcours as $p) : ?>
+                              <option value="<?php echo utf8_encode($p['designation']);?>"><?php echo utf8_encode($p["designation"]); ?></option>
+                            <?php endforeach; ?>
                         </select>
                         <label for="parcours" class="active">Parcours</label>
                       </div>
@@ -78,15 +80,21 @@
                     </div>
                     <div class="row">
                       <div class="input-field col s12">
-                        <textarea class="form-control materialize-textarea" name="lettreM" id="lettreMotivation" rows="20" required></textarea>
+                        <textarea class="form-control materialize-textarea" name="lettreM" id="lettreMotivation" rows="500"></textarea>
                         <label for="lettreMotivation" class="active">Lettre de motivation</label>
                       </div>
-                      <div class="row">
-                        <div class="input-field col s12">
-                          <button class="btn waves-effect waves-light right" type="submit" name="action">Candidater
-                            <i class="mdi-content-send right"></i>
-                          </button>
-                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <label for="lettreMFile" class="active">Joindre votre lettre de motivation (optionnel)</label>
+                        <input type="file" id="lettreMFile" name="lettreMFile" accept=".txt">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <button class="btn waves-effect waves-light right" type="submit" name="action">Candidater
+                          <i class="mdi-content-send right"></i>
+                        </button>
                       </div>
                     </div>
                   </form>
